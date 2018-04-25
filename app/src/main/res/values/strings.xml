@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Meu quarto minhas regras</string>
+    <string name="lbl_ativar_alarme">Ativar alarme</string>
+    <string name="lbl_quarto_invadido">Seu quarto esta sendo invadido</string>
+    <string name="lbl_desativar_alarme">Desativar alarme</string>
+    <string name="lbl_ligar_para_a_mae">Ligar para a mãe</string>
+    <string name="lbl_alarme_desativado">Alarme desativado</string>
+    <string name="lbl_alarme_ativado">Alarme ativado, seu quarto está seguro</string>
+    <string name="lbl_faazer_ligacao">Fazer ligação</string>
+    <string name="lbl_ligar">Ligar</string>
+    <string name="lbl_cancelar">Cancelar</string>
+    <string name="hint_telefone">Exemplo: 11900000000</string>
+    <string name="msg_inserir_numero_cadastrado">Insira o número para realizar ligação se o campo não estiver preenchido</string>
+    <string name="msg_precisa_permissoes">Precisamos das permissões para continuar</string>
+</resources>

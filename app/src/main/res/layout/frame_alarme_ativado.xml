@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    android:visibility="gone"
+    tools:visibility="visible"
+    android:id="@+id/llAlarmeAtivado"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/ivStatus"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:src="@drawable/ic_shield" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/lbl_alarme_ativado"
+        android:textColor="@color/branco"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btDesativarAlarme1"
+        style="@style/MyButton"
+        android:text="@string/lbl_desativar_alarme"
+        android:theme="@style/MyButtonVermelho" />
+
+
+</LinearLayout>
