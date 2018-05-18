@@ -15,6 +15,7 @@ import com.afollestad.materialdialogs.MaterialDialog
 import kotlinx.android.synthetic.main.frame_alarme_ativado.*
 import kotlinx.android.synthetic.main.frame_home.*
 import kotlinx.android.synthetic.main.frame_invadindo_quarto.*
+import kotlinx.android.synthetic.main.progress_loading.*
 
 class MainActivity : AppCompatActivity(), MainView {
 
@@ -46,7 +47,6 @@ class MainActivity : AppCompatActivity(), MainView {
     override fun onResume() {
         super.onResume()
         presenter.recarregarLayout(this)
-        mostrarLayoutTocandoAlarme()
     }
 
     override fun mostrarLayoutHome() {
@@ -73,7 +73,7 @@ class MainActivity : AppCompatActivity(), MainView {
                 .title(getString(R.string.lbl_faazer_ligacao))
                 .inputRange(10, 20)
                 .content(getString(R.string.msg_inserir_numero_cadastrado))
-                .inputType(InputType.TYPE_TEXT_FLAG_MULTI_LINE)
+                .inputType(InputType.TYPE_CLASS_PHONE)
                 .positiveText(getString(R.string.lbl_ligar))
                 .negativeText(getString(R.string.lbl_cancelar))
                 .input(getString(R.string.hint_telefone), numeroCadastrado)
@@ -94,6 +94,30 @@ class MainActivity : AppCompatActivity(), MainView {
             intent.data = Uri.parse("tel: $telefone")
             startActivity(intent)
         }
+    }
+
+    override fun showError(t: Throwable) {
+        MaterialDialog.Builder(this)
+                .title(getString(R.string.title_erro))
+                .content(t.localizedMessage)
+                .positiveText("OK")
+                .onPositive { dialog, _ ->
+                    dialog.dismiss()
+                }
+                .show()
+    }
+
+
+    override fun showLoading() {
+        progressBarHolder.visibility = View.VISIBLE
+    }
+
+    override fun hideLoading() {
+        progressBarHolder.visibility = View.GONE
+    }
+
+    override fun setTextLoading(mensagem: String) {
+        progressBarText.text = mensagem
     }
 
     override fun onRequestPermissionsResult(requestCode: Int,

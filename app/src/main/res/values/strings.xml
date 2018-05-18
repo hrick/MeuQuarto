@@ -10,6 +10,8 @@
     <string name="lbl_ligar">Ligar</string>
     <string name="lbl_cancelar">Cancelar</string>
     <string name="hint_telefone">Exemplo: 11900000000</string>
-    <string name="msg_inserir_numero_cadastrado">Insira o número para realizar ligação se o campo não estiver preenchido</string>
+    <string name="msg_inserir_numero_cadastrado">Insira o número com DDD para realizar ligação se o campo não estiver preenchido</string>
     <string name="msg_precisa_permissoes">Precisamos das permissões para continuar</string>
+    <string name="msg_aguarde">AGUARDE...</string>
+    <string name="title_erro">Erro</string>
 </resources>
